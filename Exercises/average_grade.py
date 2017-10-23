@@ -9,3 +9,10 @@ def average_grade(lst):
     """
 
     # your code here
+    gradebook = []
+    for i in lst:
+        gradebook.append(i.pop(0))
+        gradebook.append(float(sum(i)) / max(len(i), 1))
+    return gradebook
+
+print(average_grade([['Bob', 56, 80, 72, 90], ['Alice', 60, 88, 44, 70]]))
